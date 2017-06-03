@@ -13,9 +13,25 @@
 		3F4C15A61EE26ECC00C7CEA1 /* VSM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C15A41EE26ECC00C7CEA1 /* VSM.xcdatamodeld */; };
 		3F4C15A81EE26ECC00C7CEA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C15A71EE26ECC00C7CEA1 /* Assets.xcassets */; };
 		3F4C15AB1EE26ECC00C7CEA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C15A91EE26ECC00C7CEA1 /* LaunchScreen.storyboard */; };
+		81AC764381D217A4E6A6C8A0 /* Pods_VSM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BDA9B2C808A0244C41ED3C /* Pods_VSM.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3F4C15D61EE29EB100C7CEA1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		13D6F90DA3C26BAF56B46595 /* Pods-VSM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSM.release.xcconfig"; path = "Pods/Target Support Files/Pods-VSM/Pods-VSM.release.xcconfig"; sourceTree = "<group>"; };
+		29BDA9B2C808A0244C41ED3C /* Pods_VSM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VSM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4C159A1EE26ECC00C7CEA1 /* VSM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4C159D1EE26ECC00C7CEA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F4C159F1EE26ECC00C7CEA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +40,7 @@
 		3F4C15A71EE26ECC00C7CEA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4C15AA1EE26ECC00C7CEA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F4C15AC1EE26ECC00C7CEA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60CB66900CC62BEE4C02B31B /* Pods-VSM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VSM/Pods-VSM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +48,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81AC764381D217A4E6A6C8A0 /* Pods_VSM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FC8353064B798B9E7D186FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29BDA9B2C808A0244C41ED3C /* Pods_VSM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3F4C15911EE26ECC00C7CEA1 = {
 			isa = PBXGroup;
 			children = (
 				3F4C159C1EE26ECC00C7CEA1 /* VSM */,
 				3F4C159B1EE26ECC00C7CEA1 /* Products */,
+				9DB49BC4D5948C7174087804 /* Pods */,
+				2FC8353064B798B9E7D186FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +95,15 @@
 			path = VSM;
 			sourceTree = "<group>";
 		};
+		9DB49BC4D5948C7174087804 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60CB66900CC62BEE4C02B31B /* Pods-VSM.debug.xcconfig */,
+				13D6F90DA3C26BAF56B46595 /* Pods-VSM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +111,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F4C15AF1EE26ECC00C7CEA1 /* Build configuration list for PBXNativeTarget "VSM" */;
 			buildPhases = (
+				5D518D020CAAE657A308F9C3 /* [CP] Check Pods Manifest.lock */,
 				3F4C15961EE26ECC00C7CEA1 /* Sources */,
 				3F4C15971EE26ECC00C7CEA1 /* Frameworks */,
 				3F4C15981EE26ECC00C7CEA1 /* Resources */,
+				57ECF2A124303F5C41F69EBD /* [CP] Embed Pods Frameworks */,
+				AE81055B51EF081295E9CC96 /* [CP] Copy Pods Resources */,
+				3F4C15D61EE29EB100C7CEA1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +175,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57ECF2A124303F5C41F69EBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VSM/Pods-VSM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D518D020CAAE657A308F9C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE81055B51EF081295E9CC96 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VSM/Pods-VSM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F4C15961EE26ECC00C7CEA1 /* Sources */ = {
@@ -263,6 +352,7 @@
 		};
 		3F4C15B01EE26ECC00C7CEA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60CB66900CC62BEE4C02B31B /* Pods-VSM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8982T47U8J;
@@ -277,6 +367,7 @@
 		};
 		3F4C15B11EE26ECC00C7CEA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13D6F90DA3C26BAF56B46595 /* Pods-VSM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8982T47U8J;
@@ -308,6 +399,7 @@
 				3F4C15B11EE26ECC00C7CEA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

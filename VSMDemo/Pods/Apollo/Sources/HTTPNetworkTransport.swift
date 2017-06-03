@@ -70,6 +70,7 @@ public class HTTPNetworkTransport: NetworkTransport {
     request.httpMethod = "POST"
     
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.setValue("3ce93907-2543-4187-a62a-b325815fb616", forHTTPHeaderField: "Api_Key")
     
     let body: GraphQLMap = ["query": type(of: operation).queryDocument, "variables": operation.variables]
     request.httpBody = try! serializationFormat.serialize(value: body)
@@ -85,6 +86,9 @@ public class HTTPNetworkTransport: NetworkTransport {
       }
       
       if (!httpResponse.isSuccessful) {
+        if let tempData = data {
+            NSLog("data:\(String.init(data: tempData, encoding: .utf8) ?? "nil")")
+        }
         completionHandler(nil, GraphQLHTTPResponseError(body: data, response: httpResponse, kind: .errorResponse))
         return
       }

@@ -1,0 +1,9 @@
+query AssessmentList{
+    assessmentList{
+        data {
+            id
+        }
+    }
+}
+
+

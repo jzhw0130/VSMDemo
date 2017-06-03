@@ -13,6 +13,10 @@
 		3F4C15A61EE26ECC00C7CEA1 /* VSM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C15A41EE26ECC00C7CEA1 /* VSM.xcdatamodeld */; };
 		3F4C15A81EE26ECC00C7CEA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C15A71EE26ECC00C7CEA1 /* Assets.xcassets */; };
 		3F4C15AB1EE26ECC00C7CEA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C15A91EE26ECC00C7CEA1 /* LaunchScreen.storyboard */; };
+		3F4C15DB1EE2A27A00C7CEA1 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C15DA1EE2A27A00C7CEA1 /* schema.json */; };
+		3F4C15DD1EE2A2F600C7CEA1 /* TestQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C15DC1EE2A2F600C7CEA1 /* TestQuery.graphql */; };
+		3F4C15DF1EE2A45500C7CEA1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C15DE1EE2A45500C7CEA1 /* API.swift */; };
+		3FA51D231EE2E45F00BB44FD /* InitEP.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 3FA51D221EE2E45F00BB44FD /* InitEP.graphql */; };
 		81AC764381D217A4E6A6C8A0 /* Pods_VSM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BDA9B2C808A0244C41ED3C /* Pods_VSM.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +44,10 @@
 		3F4C15A71EE26ECC00C7CEA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4C15AA1EE26ECC00C7CEA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F4C15AC1EE26ECC00C7CEA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4C15DA1EE2A27A00C7CEA1 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		3F4C15DC1EE2A2F600C7CEA1 /* TestQuery.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestQuery.graphql; sourceTree = "<group>"; };
+		3F4C15DE1EE2A45500C7CEA1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = graphql/API.swift; sourceTree = "<group>"; };
+		3FA51D221EE2E45F00BB44FD /* InitEP.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InitEP.graphql; sourceTree = "<group>"; };
 		60CB66900CC62BEE4C02B31B /* Pods-VSM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VSM/Pods-VSM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,15 +92,27 @@
 		3F4C159C1EE26ECC00C7CEA1 /* VSM */ = {
 			isa = PBXGroup;
 			children = (
+				3F4C15DE1EE2A45500C7CEA1 /* API.swift */,
 				3F4C159D1EE26ECC00C7CEA1 /* AppDelegate.swift */,
 				3F4C159F1EE26ECC00C7CEA1 /* ViewController.swift */,
 				3F4C15A11EE26ECC00C7CEA1 /* Main.storyboard */,
+				3F4C15D91EE2A27A00C7CEA1 /* graphql */,
 				3F4C15A71EE26ECC00C7CEA1 /* Assets.xcassets */,
 				3F4C15A91EE26ECC00C7CEA1 /* LaunchScreen.storyboard */,
 				3F4C15AC1EE26ECC00C7CEA1 /* Info.plist */,
 				3F4C15A41EE26ECC00C7CEA1 /* VSM.xcdatamodeld */,
 			);
 			path = VSM;
+			sourceTree = "<group>";
+		};
+		3F4C15D91EE2A27A00C7CEA1 /* graphql */ = {
+			isa = PBXGroup;
+			children = (
+				3F4C15DA1EE2A27A00C7CEA1 /* schema.json */,
+				3F4C15DC1EE2A2F600C7CEA1 /* TestQuery.graphql */,
+				3FA51D221EE2E45F00BB44FD /* InitEP.graphql */,
+			);
+			path = graphql;
 			sourceTree = "<group>";
 		};
 		9DB49BC4D5948C7174087804 /* Pods */ = {
@@ -118,6 +138,7 @@
 				57ECF2A124303F5C41F69EBD /* [CP] Embed Pods Frameworks */,
 				AE81055B51EF081295E9CC96 /* [CP] Copy Pods Resources */,
 				3F4C15D61EE29EB100C7CEA1 /* Embed Frameworks */,
+				3F4C15D81EE2A13E00C7CEA1 /* Generate API.swift */,
 			);
 			buildRules = (
 			);
@@ -168,6 +189,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4C15DD1EE2A2F600C7CEA1 /* TestQuery.graphql in Resources */,
+				3FA51D231EE2E45F00BB44FD /* InitEP.graphql in Resources */,
+				3F4C15DB1EE2A27A00C7CEA1 /* schema.json in Resources */,
 				3F4C15AB1EE26ECC00C7CEA1 /* LaunchScreen.storyboard in Resources */,
 				3F4C15A81EE26ECC00C7CEA1 /* Assets.xcassets in Resources */,
 				3F4C15A31EE26ECC00C7CEA1 /* Main.storyboard in Resources */,
@@ -177,6 +201,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3F4C15D81EE2A13E00C7CEA1 /* Generate API.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate API.swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${SRCROOT}/${TARGET_NAME}/graphql\napollo-codegen generate $(find . -name '*.graphql' -maxdepth 1) --schema schema.json --output API.swift";
+		};
 		57ECF2A124303F5C41F69EBD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,6 +269,7 @@
 			files = (
 				3F4C15A01EE26ECC00C7CEA1 /* ViewController.swift in Sources */,
 				3F4C159E1EE26ECC00C7CEA1 /* AppDelegate.swift in Sources */,
+				3F4C15DF1EE2A45500C7CEA1 /* API.swift in Sources */,
 				3F4C15A61EE26ECC00C7CEA1 /* VSM.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

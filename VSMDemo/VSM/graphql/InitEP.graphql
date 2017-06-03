@@ -1,0 +1,32 @@
+mutation InitEP{
+initiateEnrolledProgram(token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3Rpb24iOiJlcF9pbml0aWF0ZV9lbnJvbGxtZW50Iiwic2lnbmVlIjoiNTg5YzM4NDVmMmNjMDMwMDIxZGRjODA5IiwiZW5yb2xsZWRQcm9ncmFtSWQiOiI1OTMyYzUwNWNhNTE5ZDA3ZWRlZjZjZjEiLCJpYXQiOjE0OTY0OTk0NjYsImV4cCI6MTQ5NjUwMDY2Nn0.uz3uF3MnMmv1XneklHDuJUrZyXYI0A6I3HC6WVSIZug"){
+    secret
+    certificate
+    enrolledProgram {
+        id
+        name
+    devices {
+        type
+        model
+        status
+        address
+        other
+    }
+    user {
+        id
+        username
+        addresses {
+            type
+            streetName
+            streetNumber
+            floor
+            unit
+            city
+            state
+            postCode
+            }
+        }
+    }
+  }
+}
+

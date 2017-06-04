@@ -86,9 +86,6 @@ public class HTTPNetworkTransport: NetworkTransport {
       }
       
       if (!httpResponse.isSuccessful) {
-        if let tempData = data {
-            NSLog("data:\(String.init(data: tempData, encoding: .utf8) ?? "nil")")
-        }
         completionHandler(nil, GraphQLHTTPResponseError(body: data, response: httpResponse, kind: .errorResponse))
         return
       }

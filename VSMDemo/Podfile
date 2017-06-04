@@ -5,5 +5,7 @@ use_frameworks!
 target 'VSM' do
 
 pod 'Apollo'
+pod 'CareKit'
+pod 'ResearchKit'
 
 end

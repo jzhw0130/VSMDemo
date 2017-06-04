@@ -29,27 +29,36 @@ class ViewController: UIViewController {
 //        }
         
         apollo.perform(mutation: InitEpMutation()) { (result, error) in
-            if let responseError = (error as? GraphQLHTTPResponseError) {
-                NSLog("responseError_:\(responseError)")
-                if let errorData = responseError.body {
-                    let errorJson = try? JSONSerialization.jsonObject(with: errorData, options: JSONSerialization.ReadingOptions.mutableContainers) as! JSONObject
-                    let errorDic = (errorJson? ["errors"] as? [Any])?[0] as? [String: Any]
-                    let codeNumber = errorDic? ["code"] as? Int
-                    let key = errorDic? ["key"]
-                    let message = errorDic? ["message"]
-                    
-                    if let code = codeNumber {
-                        NSLog("\n code:\(code)\n key:\(String(describing: key))\n message:\(String(describing: message))")
+            
+            if let error = error {
+                //Error for server logical
+                if let responseError = (error as? GraphQLHTTPResponseError) {
+                    if let errorData = responseError.body {
+                        let errorJson = try? JSONSerialization.jsonObject(with: errorData, options: JSONSerialization.ReadingOptions.mutableContainers) as! JSONObject
+                        let errorDic = (errorJson? ["errors"] as? [Any])?[0] as? [String: Any]
+                        let codeNumber = errorDic? ["code"] as? Int
+                        let key = errorDic? ["key"]
+                        let message = errorDic? ["message"]
+                        
+                        if let message = message {
+                            NSLog("\n code:\(String(describing: codeNumber))\n key:\(String(describing: key))\n message:\(String(describing: message))")
+                        } else {
+                            NSLog("responseError_:\(responseError)")
+                        }
+                        
                     } else {
-                        NSLog("responseError_:\(responseError)")
+                        NSLog("responseError__:\(responseError)")
                     }
                     
+                } else if let error = (error as NSError?){
+                    //Error for network
+                    NSLog("responseError___code:\(error.code) description:\(error.localizedDescription)")
                 } else {
-                    NSLog("responseError__:\(responseError)")
+                    //Error Unknown
+                    NSLog("responseError____\(error.localizedDescription)")
                 }
-                
             } else {
-                NSLog("result:\(result!)")
+                NSLog("result:\(String(describing: result))")
             }
         }
     }

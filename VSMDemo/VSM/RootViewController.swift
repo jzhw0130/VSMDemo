@@ -1,35 +1,47 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  VSM
 //
-//  Created by jing on 03/06/2017.
+//  Created by jing on 04/06/2017.
 //  Copyright © 2017 jing. All rights reserved.
 //
 
 import UIKit
 import Apollo
 
-class ViewController: UIViewController {
-
+class RootViewController: UITabBarController {
+    
     let apollo = ApolloClient(url: URL(string: "http://192.168.2.107:4000/graphql")!)
-
     var watcher: GraphQLQueryWatcher<AssessmentListQuery>?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        NSLog("App launch...")
-        
-//        watcher = apollo.watch(query: AssessmentListQuery()) { (result, error) in
-//            if let err = error {
-//                NSLog("error:\(err)")
-//            } else {
-//                NSLog("result:\(result!)")
-//            }
-//        }
-        
+
+        // Do any additional setup after loading the view.
+
+        commandTestMutation()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: - Test GraphQL Api
+    func commandTestQueryGraphQL() -> Void {
+        watcher = apollo.watch(query: AssessmentListQuery()) { (result, error) in
+            if let err = error {
+                NSLog("error:\(err)")
+            } else {
+                NSLog("result:\(result!)")
+            }
+        }
+    }
+    
+    
+    func commandTestMutation() -> Void {
         apollo.perform(mutation: InitEpMutation()) { (result, error) in
-            
             if let error = error {
                 //Error for server logical
                 if let responseError = (error as? GraphQLHTTPResponseError) {
@@ -62,11 +74,14 @@ class ViewController: UIViewController {
             }
         }
     }
+    /*
+    // MARK: - Navigation
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
+    */
 
 }
-

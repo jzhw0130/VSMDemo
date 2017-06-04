@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F4A3CDE1EE44AB20002A575 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A3CDD1EE44AB20002A575 /* RootViewController.swift */; };
 		3F4C159E1EE26ECC00C7CEA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C159D1EE26ECC00C7CEA1 /* AppDelegate.swift */; };
-		3F4C15A01EE26ECC00C7CEA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C159F1EE26ECC00C7CEA1 /* ViewController.swift */; };
 		3F4C15A31EE26ECC00C7CEA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C15A11EE26ECC00C7CEA1 /* Main.storyboard */; };
 		3F4C15A61EE26ECC00C7CEA1 /* VSM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C15A41EE26ECC00C7CEA1 /* VSM.xcdatamodeld */; };
 		3F4C15A81EE26ECC00C7CEA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C15A71EE26ECC00C7CEA1 /* Assets.xcassets */; };
@@ -36,9 +36,9 @@
 /* Begin PBXFileReference section */
 		13D6F90DA3C26BAF56B46595 /* Pods-VSM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSM.release.xcconfig"; path = "Pods/Target Support Files/Pods-VSM/Pods-VSM.release.xcconfig"; sourceTree = "<group>"; };
 		29BDA9B2C808A0244C41ED3C /* Pods_VSM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VSM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F4A3CDD1EE44AB20002A575 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3F4C159A1EE26ECC00C7CEA1 /* VSM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4C159D1EE26ECC00C7CEA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F4C159F1EE26ECC00C7CEA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F4C15A21EE26ECC00C7CEA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F4C15A51EE26ECC00C7CEA1 /* VSM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VSM.xcdatamodel; sourceTree = "<group>"; };
 		3F4C15A71EE26ECC00C7CEA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,10 +94,10 @@
 			children = (
 				3F4C15DE1EE2A45500C7CEA1 /* API.swift */,
 				3F4C159D1EE26ECC00C7CEA1 /* AppDelegate.swift */,
-				3F4C159F1EE26ECC00C7CEA1 /* ViewController.swift */,
-				3F4C15A11EE26ECC00C7CEA1 /* Main.storyboard */,
+				3F4A3CDD1EE44AB20002A575 /* RootViewController.swift */,
 				3F4C15D91EE2A27A00C7CEA1 /* graphql */,
 				3F4C15A71EE26ECC00C7CEA1 /* Assets.xcassets */,
+				3F4C15A11EE26ECC00C7CEA1 /* Main.storyboard */,
 				3F4C15A91EE26ECC00C7CEA1 /* LaunchScreen.storyboard */,
 				3F4C15AC1EE26ECC00C7CEA1 /* Info.plist */,
 				3F4C15A41EE26ECC00C7CEA1 /* VSM.xcdatamodeld */,
@@ -267,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F4C15A01EE26ECC00C7CEA1 /* ViewController.swift in Sources */,
+				3F4A3CDE1EE44AB20002A575 /* RootViewController.swift in Sources */,
 				3F4C159E1EE26ECC00C7CEA1 /* AppDelegate.swift in Sources */,
 				3F4C15DF1EE2A45500C7CEA1 /* API.swift in Sources */,
 				3F4C15A61EE26ECC00C7CEA1 /* VSM.xcdatamodeld in Sources */,

@@ -1,13 +1,20 @@
 # VSMDemo
-
+This project requires Xcode 8, run iOS 9.0+. 
 
 ## Installation
 
-This project requires Xcode 8, run iOS 9.0+.    
-
-You will have to install the `apollo-codegen` command globally through npm before run the project:
+Install the `apollo-codegen`:
 
 ```sh
 npm install -g apollo-codegen
 ```
 
+Install the `CocoaPods `:
+
+```sh
+sudo gem install cocoapods
+```
+## Configure server uri on StoreManager.swift
+```sh
+static internal let apolloClient = ApolloClient(url: URL(string: "http://192.168.2.107:4000/graphql")!)
+```

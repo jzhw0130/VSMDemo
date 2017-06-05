@@ -1,12 +1,18 @@
 PODS:
   - Apollo (0.5.6)
+  - CareKit (1.0.2)
+  - ResearchKit (1.4.1)
 
 DEPENDENCIES:
   - Apollo
+  - CareKit
+  - ResearchKit
 
 SPEC CHECKSUMS:
   Apollo: 124ddbbca48acca75fd5f9ec5045454cb410bb31
+  CareKit: 377857f33d3795ed6d24a5df116154773265f81a
+  ResearchKit: 3533ea3a2270e4ed7ff830e19755dc959fdfd430
 
-PODFILE CHECKSUM: 38df771ce4942ec6dda0b3babb624a36429988e9
+PODFILE CHECKSUM: fcaabcbcddfa35c065c87e0ee67fb6c54f6228ab
 
 COCOAPODS: 1.2.1
